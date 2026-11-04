@@ -1,0 +1,22 @@
+# Paste these two blocks into /config/configuration.yaml
+# (merge with any existing `shell_command:` or `lovelace:` sections),
+# then restart Home Assistant.
+
+# Downloads the `live` branch of this repo into Home Assistant:
+#   www/merci-home/*      -> /config/www/merci-home/
+#   dashboards/my-home.yaml -> /config/dashboards/my-home.yaml
+# The full command lives in secrets.yaml (see ha/secrets.example.yaml)
+# so a GitHub token, if the repo is private, never sits in this file.
+shell_command:
+  merci_home_pull: !secret merci_home_pull_cmd
+
+# A second dashboard that reads its layout from the synced file.
+# The existing UI-built "My Home" dashboard is left untouched.
+lovelace:
+  dashboards:
+    my-home-claude:
+      mode: yaml
+      title: My Home (Claude)
+      icon: mdi:home-edit
+      show_in_sidebar: true
+      filename: dashboards/my-home.yaml

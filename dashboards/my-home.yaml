@@ -1,0 +1,12 @@
+# My Home (Claude) — live dashboard layout.
+# Replace this placeholder with the contents of
+# My Home → Edit dashboard → ⋮ → Raw configuration editor.
+title: My Home (Claude)
+views:
+  - title: Home
+    path: home
+    cards:
+      - type: markdown
+        content: >-
+          Placeholder. The real layout has not been copied into
+          `dashboards/my-home.yaml` yet.
