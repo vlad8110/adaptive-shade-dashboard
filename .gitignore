@@ -147,3 +147,16 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Local Home Assistant data and private deployment artifacts
+.storage/
+secrets.yaml
+secrets.yml
+configuration.yaml
+backups/
+*.tar
+*.tar.gz
+*.zip
+*.pem
+*.key
+.DS_Store
